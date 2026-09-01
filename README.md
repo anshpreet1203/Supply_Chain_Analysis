@@ -27,7 +27,7 @@ The objective of this project is to transform raw supply-chain data into actiona
 - **SQL / MySQL** — Data analysis and business queries
 - **Power BI** — Data modeling, DAX, visualization and dashboarding
 - **Power Query** — Data preparation and transformation
-- **Python** — Used separately for personal EDA and analysis
+  
 
 ---
 
@@ -46,9 +46,9 @@ Supply-Chain-Analytics/
 │   └── Supply Chain.pbix
 │
 ├── screenshots/
-│   ├── executive_overview.png
-│   ├── inventory_supplier_analysis.png
-│   └── demand_forecast_analysis.png
+│   ├── executive_overview.jpg
+│   ├── inventory_supplier_analysis.jpg
+│   └── demand_forecast_analysis.jpg
 │
 └── README.md
 ```
@@ -105,10 +105,7 @@ Provides a high-level view of supply-chain performance.
 - Gross Profit
 - Gross Margin
 - Average Inventory Value
-- Average Inventory
-- Average Lead Time
-- Reorder Risk
-- Forecast Error
+
 
 ### Visual Analysis
 
@@ -224,83 +221,7 @@ A **28% promotion lift** means promotional observations had approximately 28% hi
 
 ---
 
-# 💻 SQL Analysis
 
-The SQL analysis covers:
-
-- Total units sold
-- Total revenue
-- Total cost
-- Gross profit
-- Gross margin
-- Revenue by region
-- Revenue by warehouse
-- Top 10 SKUs
-- Supplier performance
-- Reorder risk
-- Forecast error
-- Forecast error by month
-- Promotion lift
-- Monthly demand analysis
-
-### SQL Concepts Used
-
-- `SELECT`
-- `WHERE`
-- `GROUP BY`
-- `ORDER BY`
-- `SUM()`
-- `AVG()`
-- `COUNT()`
-- `ROUND()`
-- `CASE`
-- `ABS()`
-- Date functions
-- CTEs
-- Window functions
-
-### Example: Revenue by Region
-
-```sql
-SELECT
-    Region,
-    SUM(Units_Sold * Unit_Price) AS revenue
-FROM supply_table
-GROUP BY Region
-ORDER BY revenue DESC;
-```
-
-### Example: Supplier Performance
-
-```sql
-SELECT
-    Supplier_ID,
-    ROUND(AVG(Supplier_Lead_Time_Days), 2) AS avg_lead_time
-FROM supply_table
-GROUP BY Supplier_ID
-ORDER BY avg_lead_time DESC;
-```
-
-### Example: Monthly Demand with CTE
-
-```sql
-WITH monthly_demand AS (
-    SELECT
-        YEAR(Date) AS year,
-        MONTH(Date) AS month_number,
-        MONTHNAME(Date) AS month_name,
-        SUM(Units_Sold) AS total_units
-    FROM supply_table
-    GROUP BY
-        YEAR(Date),
-        MONTH(Date),
-        MONTHNAME(Date)
-)
-
-SELECT *
-FROM monthly_demand
-ORDER BY year, month_number;
-```
 
 ---
 
