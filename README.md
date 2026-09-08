@@ -249,20 +249,18 @@ A **28% promotion lift** means promotional observations had approximately 28% hi
 - Analyze promotional performance by SKU and region rather than relying only on overall promotion lift.
 - Investigate the causes of the observed revenue decline between the peak and lower-demand periods.
 
-These recommendations are based on descriptive analysis and should be validated against operational and business context before implementation.
 
 ---
 
 # 📸 Dashboard Screenshots
 
-Add screenshots of the three Power BI pages to the repository:
 
 ```markdown
-![Executive Overview](screenshots/executive_overview.png)
+![Executive Overview](screenshots/Demand and Forecast Analysis.jpg)
 
-![Inventory & Supplier Analysis](screenshots/inventory_supplier_analysis.png)
+![Inventory & Supplier Analysis](screenshots/Inventory Supplier Analysis.jpg)
 
-![Demand & Forecast Analysis](screenshots/demand_forecast_analysis.png)
+![Demand & Forecast Analysis](screenshots/Supply CHain Executive Overview.jpg)
 ```
 
 ---
@@ -287,10 +285,4 @@ Add screenshots of the three Power BI pages to the repository:
 
 ---
 
-## 👤 Author
 
-**Anshpreet Singh**
-
-BCA Graduate | Aspiring Data Analyst
-
-**Skills:** SQL | Power BI | Python | Excel | Data Analytics
